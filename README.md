@@ -70,7 +70,7 @@ To run the script, ensure you have the following libraries installed:
 ### Installation
 
 ```bash
-git clone https://github.com/your-username/3DPointCurveExtractor.git
+git clone https://github.com/maggielovedd/3D-Point-Cloud-Curve-Extraction-and-Optimization.git
 ```
 
 Contributing
