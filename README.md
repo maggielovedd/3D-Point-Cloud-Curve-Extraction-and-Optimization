@@ -1,12 +1,17 @@
 3D Point Cloud Curve Extraction and Optimization
 ===============================
 
-`3D Point Cloud Curve Extraction` is a tool designed to derive a representative curve or center line from a noisy 3D point cloud, specifically for point clouds with discernible geometric patterns.
+`3D Point Cloud Curve Extraction` is designed to derive a representative curve or center line from a noisy 3D point cloud, specifically for point clouds with discernible geometric patterns.
+
+<img src="https://github.com/maggielovedd/3D-Point-Cloud-Curve-Extraction-and-Optimization/blob/main/figure/Figure_1.png" width="800" alt=""> 
 
 Description
 -----------
 
 Given a noisy point cloud with an inherent structure or shape, this tool identifies and traces a continuous curve that encapsulates the essence of the shape. It synthesizes 3D point clouds based on predefined shapes, simulates noise to mimic real-world scenarios, thins out the point cloud to emphasize its core structure, ensures the curve's continuity, and uses Bayesian optimization to find the best parameters for curve extraction.
+
+<img src="https://github.com/maggielovedd/3D-Point-Cloud-Curve-Extraction-and-Optimization/blob/main/figure/curve.gif" width="400" alt="">  <img src="https://github.com/maggielovedd/3D-Point-Cloud-Curve-Extraction-and-Optimization/blob/main/figure/mobius.gif" width="400" alt=""> 
+<img src="https://github.com/maggielovedd/3D-Point-Cloud-Curve-Extraction-and-Optimization/blob/main/figure/sinwave.gif" width="400" alt="">  <img src="https://github.com/maggielovedd/3D-Point-Cloud-Curve-Extraction-and-Optimization/blob/main/figure/torus.gif" width="400" alt=""> 
 
 
 Key Features
@@ -37,7 +42,9 @@ These parameters are intricately fine-tuned through Bayesian optimization to gen
 
 Limitation
 ------------
-This code is primarily designed for open geometric patterns. It is not optimized for closed-loop geometries such as circles. Users should be cautious when applying this tool on such datasets.
+This code is primarily designed for open geometric patterns. It is not optimized for closed-loop geometries such as circles and trefoil.
+
+<img src="https://github.com/maggielovedd/3D-Point-Cloud-Curve-Extraction-and-Optimization/blob/main/figure/trefoil.gif" width="500" alt="">  
 
 
 Getting Started
