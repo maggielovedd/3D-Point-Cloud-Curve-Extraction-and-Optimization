@@ -10,7 +10,11 @@ Description
 
 Given a noisy point cloud with an inherent structure or shape, this tool identifies and traces a continuous curve that encapsulates the essence of the shape. It synthesizes 3D point clouds based on predefined shapes, simulates noise to mimic real-world scenarios, thins out the point cloud to emphasize its core structure, ensures the curve's continuity, and uses Bayesian optimization to find the best parameters for curve extraction.
 
-<img src="https://github.com/maggielovedd/3D-Point-Cloud-Curve-Extraction-and-Optimization/blob/main/figure/curve.gif" width="400" alt="">  <img src="https://github.com/maggielovedd/3D-Point-Cloud-Curve-Extraction-and-Optimization/blob/main/figure/mobius.gif" width="400" alt=""> 
+* blue points: sample 3d point cloud
+* orange points: thinned points based on local regression
+* green points: sorted points
+
+<img src="https://github.com/maggielovedd/3D-Point-Cloud-Curve-Extraction-and-Optimization/blob/main/figure/curve.gif" width="400" alt="">  <img src="https://github.com/maggielovedd/3D-Point-Cloud-Curve-Extraction-and-Optimization/blob/main/figure/trefoil.gif" width="400" alt=""> 
 <img src="https://github.com/maggielovedd/3D-Point-Cloud-Curve-Extraction-and-Optimization/blob/main/figure/sinwave.gif" width="400" alt="">  <img src="https://github.com/maggielovedd/3D-Point-Cloud-Curve-Extraction-and-Optimization/blob/main/figure/torus.gif" width="400" alt=""> 
 
 
@@ -42,9 +46,9 @@ These parameters are intricately fine-tuned through Bayesian optimization to gen
 
 Limitation
 ------------
-This code is primarily designed for open geometric patterns. It is not optimized for closed-loop geometries such as circles and trefoil.
+This code is primarily designed for open geometric patterns. It is not optimized for closed-loop or partially closed-loop geometries such as circles and mobius. Sorted point sometimes didn't order properly at where the sample points are thick and some part of the geometry close to others.
 
-<img src="https://github.com/maggielovedd/3D-Point-Cloud-Curve-Extraction-and-Optimization/blob/main/figure/trefoil.gif" width="500" alt="">  
+<img src="https://github.com/maggielovedd/3D-Point-Cloud-Curve-Extraction-and-Optimization/blob/main/figure/mobius.gif" width="600" alt="">  
 
 
 Getting Started
@@ -61,7 +65,7 @@ To run the script, ensure you have the following libraries installed:
 *   `sklearn`
 *   `vg`
 *   `skopt`
-*   `signal` (Note: compatible with UNIX platforms. Windows users might need an alternative approach for timeout handling.)
+*   `signal`
 
 ### Installation
 
@@ -82,7 +86,7 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) for more 
 Acknowledgements
 ----------------
 
-  Thanks to the open-source community for providing insights and tools that contributed to this project.
+  The method is developed based on [3D Point Cloud Curve Extraction](https://github.com/aliadnani/curves).
 
 
 
