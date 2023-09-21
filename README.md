@@ -1,4 +1,4 @@
-3D Point Cloud Curve Extraction and Optimization
+3D Point Cloud Curve Extraction
 ===============================
 
 `3D Point Cloud Curve Extraction` is designed to derive a representative curve or center line from a noisy 3D point cloud, specifically for point clouds with discernible geometric patterns.
