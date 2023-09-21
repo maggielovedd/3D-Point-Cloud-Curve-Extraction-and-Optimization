@@ -35,6 +35,11 @@ The curve extraction process heavily relies on the optimization of three crucial
 These parameters are intricately fine-tuned through Bayesian optimization to generate an extracted curve that is both faithful to the intrinsic shape in the point cloud and resilient against the inherent noise and anomalies.
 
 
+Limitation
+------------
+This code is primarily designed for open geometric patterns. It is not optimized for closed-loop geometries such as circles. Users should be cautious when applying this tool on such datasets.
+
+
 Getting Started
 ---------------
 
